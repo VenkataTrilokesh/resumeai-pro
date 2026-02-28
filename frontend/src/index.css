@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════════════
+   TIPTAP EDITOR — Word-style Resume Rendering
+═══════════════════════════════════════════════════════ */
+
+.tiptap-resume-editor {
+  outline: none;
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+  color: #333;
+  min-height: 600px;
+  padding: 0;
+}
+
+/* Name */
+.tiptap-resume-editor h1,
+.tiptap-resume-editor .resume-name {
+  font-size: 20pt !important;
+  font-weight: 700;
+  color: #1A3A6B;
+  text-align: center;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Contact line */
+.tiptap-resume-editor .contact-line {
+  text-align: center;
+  font-size: 9pt;
+  color: #555;
+  margin: 2px 0 12px 0;
+}
+
+/* Section Headers */
+.tiptap-resume-editor h2,
+.tiptap-resume-editor .section-header {
+  font-size: 11pt !important;
+  font-weight: 700;
+  color: #1A3A6B;
+  text-transform: uppercase;
+  margin: 14px 0 0 0;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid #1A3A6B;
+  letter-spacing: 0.06em;
+}
+
+/* Summary */
+.tiptap-resume-editor .summary-text {
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.5;
+  margin: 5px 0 4px 0;
+  text-align: justify;
+}
+
+/* Skills */
+.tiptap-resume-editor .skills-list {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 5px 0 4px 0;
+  line-height: 1.7;
+}
+
+/* Job Header */
+.tiptap-resume-editor .job-header {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 10px 0 1px 0;
+}
+
+/* Job Dates */
+.tiptap-resume-editor .job-dates {
+  font-size: 9.5pt;
+  color: #555;
+  font-style: italic;
+  margin: 0 0 4px 0;
+}
+
+/* Bullet points */
+.tiptap-resume-editor ul.job-bullets {
+  margin: 2px 0 2px 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.tiptap-resume-editor ul.job-bullets li {
+  font-size: 10pt;
+  color: #333;
+  margin: 1px 0;
+  line-height: 1.45;
+  padding-left: 4px;
+}
+
+.tiptap-resume-editor ul {
+  margin: 3px 0;
+  padding-left: 22px;
+}
+
+.tiptap-resume-editor ul li {
+  margin: 2px 0;
+  line-height: 1.45;
+}
+
+/* Education */
+.tiptap-resume-editor .edu-degree {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 6px 0 1px 0;
+}
+
+.tiptap-resume-editor .edu-detail {
+  font-size: 9.5pt;
+  color: #555;
+  margin: 0 0 2px 0;
+}
+
+/* Certifications */
+.tiptap-resume-editor .cert-item {
+  font-size: 10pt;
+  color: #333;
+  margin: 3px 0;
+}
+
+/* Paragraphs */
+.tiptap-resume-editor p {
+  margin: 3px 0;
+}
+
+.tiptap-resume-editor p:empty {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CUSTOM SCROLLBAR
+═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ATS SCORE RING
+═══════════════════════════════════════════════════════ */
+.ats-ring-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ats-ring-container svg {
+  transform: rotate(-90deg);
+}
+
+/* ═══════════════════════════════════════════════════════
+   TRANSITIONS & ANIMATIONS
+═══════════════════════════════════════════════════════ */
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyword pills */
+.keyword-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 2px;
+}
+
+/* Loading shimmer */
+.shimmer {
+  background: linear-gradient(90deg, #f0f4f8 25%, #e2e8f0 50%, #f0f4f8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Print styles for PDF preview */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
